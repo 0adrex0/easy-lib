@@ -170,9 +170,9 @@ class EasySlider {
         this.slider.addEventListener('mouseup', this.onMouseUp.bind(this));
         this.slider.addEventListener('mousemove', this.onMouseMove.bind(this));
 
-        this.slider.addEventListener('touchstart', this.onTouchDown.bind(this));
-        this.slider.addEventListener('touchend', this.onTouchUp.bind(this));
-        this.slider.addEventListener('touchmove', this.onTouchMove.bind(this));
+        this.slider.addEventListener('touchstart', this.onTouchDown.bind(this), {passive: true});
+        this.slider.addEventListener('touchend', this.onTouchUp.bind(this), {passive: true});
+        this.slider.addEventListener('touchmove', this.onTouchMove.bind(this), {passive: true});
 
         window.addEventListener('resize', this.onResize.bind(this));
         this.onResize();
@@ -180,40 +180,40 @@ class EasySlider {
     }
 }
 
-/***********************************************************
-# - interval: margins between slides are measured in pixels
-# - slidesToShow: number of shown sliders
-# - slidesToScroll: number of scrollable sliders
-# - arrows: show pagination
-# - autoplaySpeed: ms scrolling speed
-***********************************************************/ 
+    /***********************************************************
+    # - interval: margins between slides are measured in pixels
+    # - slidesToShow: number of shown sliders
+    # - slidesToScroll: number of scrollable sliders
+    # - arrows: show pagination
+    # - autoplaySpeed: ms scrolling speed
+    ***********************************************************/ 
 
-// const easySliderSettings = {
-//     arrows: false,
-//     interval: 10,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-//     // autoplaySpeed: 1000,
-//     responsive: [
-//         {
-//             breakpoint: 1024,
-//             settings: {
-//                 interval: 10,
-//                 slidesToShow: 2,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToScroll: 1,
-//                 slidesToShow: 1,
-//                 interval: 0, 
-//                 arrows: false,
-//             }
-//         }
-//     ],
-// };
+    // const easySliderSettings = {
+    //     arrows: false,
+    //     interval: 10,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 3,
+    //     // autoplaySpeed: 1000,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 interval: 10,
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //                 arrows: false,
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToScroll: 1,
+    //                 slidesToShow: 1,
+    //                 interval: 0, 
+    //                 arrows: false,
+    //             }
+    //         }
+    //     ],
+    // };
 
-// new EasySlider('#easy-slider_1', easySliderSettings);
+    // new EasySlider('#easy-slider_1', easySliderSettings);
