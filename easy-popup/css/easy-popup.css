@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.easy-popup {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.easy-popup .easy-popup-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.easy-popup .btn-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.easy-popup.active {
+    display: block;
+}
+
+

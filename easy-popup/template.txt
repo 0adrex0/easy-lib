@@ -1,0 +1,16 @@
+<!-- The CLASS of the open BUTTON for calling the modal window and the ID must match -->
+
+<link rel="stylesheet" href="css/easy-popup.css">
+
+<button class="[easy-popup_1]">Open Popup [easy-popup_1]</button> 
+
+<section class="easy-popup" id="[easy-popup_1]">
+    <div class="easy-popup-container">
+        <button class="btn btn-close">X</button>
+    </div>
+</section>
+
+<script src="js/easy-popup.js"></script>
+<script>
+    new EasyPopup('[easy-popup_1]');  
+</script>

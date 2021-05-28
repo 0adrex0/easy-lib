@@ -106,6 +106,7 @@ class EasySlider {
     onTouchUp(e) {
         this.endClientX =  e.changedTouches[0].clientX;
         console.log('onMouseUp', this.startClientX, this.endClientX);
+        e.preventDefault();
         if(this.startClientX == this.endClientX) {
             if (this.openHrefItem.href) {
                 if (!this.openHrefItem.target) this.openHrefItem.target = '_self';
@@ -118,7 +119,6 @@ class EasySlider {
     onTouchMove(e) {
         if (this.isDown) {
             console.log('onTouchMove');
-            e.preventDefault();
 
             setTimeout(() => {
                 if(this.startClientX < e.touches[0].clientX) this.moveToRight();
@@ -164,14 +164,15 @@ class EasySlider {
             item.addEventListener('dragstart', (e) => e.preventDefault());
             item.addEventListener('click', (e) => e.preventDefault());
             item.addEventListener('mousedown', () => this.openHrefItem = item);
+            item.addEventListener('touchstart', () => this.openHrefItem = item);
         });
 
         this.slider.addEventListener('mousedown', this.onMouseDown.bind(this));
-        this.slider.addEventListener('mouseup', this.onMouseUp.bind(this));
         this.slider.addEventListener('mousemove', this.onMouseMove.bind(this));
+        this.slider.addEventListener('mouseup', this.onMouseUp.bind(this));
 
         this.slider.addEventListener('touchstart', this.onTouchDown.bind(this), {passive: true});
-        this.slider.addEventListener('touchend', this.onTouchUp.bind(this), {passive: true});
+        this.slider.addEventListener('touchend', this.onTouchUp.bind(this));
         this.slider.addEventListener('touchmove', this.onTouchMove.bind(this), {passive: true});
 
         window.addEventListener('resize', this.onResize.bind(this));

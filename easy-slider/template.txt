@@ -1,0 +1,50 @@
+
+    <div class="easy-slider" id="easy-slider_1">
+        <button class="btn btn-left">&lt;</button>
+
+        <div class="easy-slider-wrapper" data-activeSlide="0">
+            <div class="easy-slider-list">
+                <a target="_blank" href="" class="easy-slider-item"></a>
+                <a target="_blank" href="" class="easy-slider-item"></a>
+                <a target="_blank" href="" class="easy-slider-item"></a>
+                <a target="_blank" href="" class="easy-slider-item"></a>
+                <a target="_blank" href="" class="easy-slider-item"></a>
+            </div>
+        </div>
+        
+        <button class="btn btn-right">&gt;</button>
+    </div>
+
+
+    <script src="js/easy-slider.js?v=1.0.0"></script>
+    <script>
+        const easySliderSettings = {
+            arrows: false,
+            interval: 10,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            // autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        interval: 10,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        interval: 0, 
+                        arrows: false,
+                    }
+                }
+            ],
+        };
+
+        new EasySlider('#easy-slider_1', easySliderSettings);
+    </script>
