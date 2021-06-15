@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    margin: 0 auto;
+}
+
+.text-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 300px;
+}
+
+.section-header {
+    min-height: 100vh;
+    background: whitesmoke;
+    background-size: cover;
+}
+
+.square {
+    width: 500px;
+    height: 500px;
+    background: rebeccapurple;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: goldenrod;
+}

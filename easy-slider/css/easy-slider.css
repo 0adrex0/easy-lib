@@ -11,14 +11,6 @@
     box-shadow: 0 0 1px seagreen;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 960px;
-    min-height: 50vh;
-    align-items: center;
-    display: flex;
-}
-
 
 /********************
 * Easy Slider
